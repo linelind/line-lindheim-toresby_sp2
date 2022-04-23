@@ -1,10 +1,129 @@
 nav {
-    .logo {
-        max-width: 60px;
-        margin: 5px 15px;
+    background-color: getColour(peach-white);
+    display: flex;
+    flex-direction: column;
+
+    li {
+        list-style: none;
+
+        @media (max-width: 850px) {
+            margin-bottom: 20px;
+        }
     }
 
-    .navbar-brand {
-        font-family: $font-headings;
+    a {
+        text-decoration: none;
+        color: getColour(black);
+    }
+
+    .btn-login {
+        background-color: getColour(peach-light);
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+
+    .fa-cart-shopping {
+        margin-left: 25px;
+        font-size: 21px;
+    }
+
+    .uppernav-smallscreen {
+        text-align: right;
+        padding: 15px 50px;
+        background-color: getColour(peach);
+
+        @media (max-width: 370px) {
+            padding: 15px 30px;
+        }
+    }
+
+    .mainnav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+
+        @media (max-width: 370px) {
+            padding: 15px 30px;
+        }
+
+        #menu-bars {
+            display: none;
+        }
+
+        .fa-bars {
+            font-size: 24px;
+        }
+
+        #menu-bars:checked ~ .navlinks {
+            display: block;
+            position: absolute;
+            background: getColour(grey);
+            right: 0;
+            bottom: 0;
+            top: 128px;
+            padding: 25px 80px 50px 25px;
+        }
+
+        .current {
+            border-bottom: 2px solid getColour(black);
+        }
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            max-width: 50px;
+            margin-right: 15px;
+        }
+
+        .navbar-brand {
+            font-family: $font-headings;
+        }
+
+        @media (max-width: 370px) {
+            .navbar-brand {
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: 850px) {
+        .fa-bars,
+        .uppernav-smallscreen {
+            display: none;
+        }
+
+        .logo-container {
+            min-width: 220px;
+        }
+
+        .mainnav-container {
+            justify-content: left;
+            height: 75px;
+        }
+
+        .navlinks,
+        .navlinks--wrapper,
+        .navuser-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navlinks--wrapper {
+            padding-left: 30px;
+            gap: 30px;
+        }
+
+        .navlinks {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .navuser-container {
+            justify-content: right;
+        }
     }
 }

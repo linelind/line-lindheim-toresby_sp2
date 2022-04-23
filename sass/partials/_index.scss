@@ -1,0 +1,20 @@
+.hero-banner {
+    min-height: 300px;
+    padding: 50px 25px;
+    background-color: getColour(green);
+    color: getColour(white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: getColour(white);
+        background: getColour(green-light);
+        padding: 5px 45px;
+        border-radius: 3px;
+    }
+}

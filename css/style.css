@@ -1,5 +1,15 @@
+.largerscreen-only {
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .largerscreen-only {
+    display: inline;
+  }
+}
+
 body {
-  background-color: #f5cabb;
+  background-color: #fcfcfc;
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
@@ -8,12 +18,197 @@ h1 {
   font-family: "Cooper-black-std", serif;
 }
 
-nav .logo {
-  max-width: 60px;
-  margin: 5px 15px;
+nav {
+  background-color: #fff6f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-nav .navbar-brand {
+nav li {
+  list-style: none;
+}
+
+@media (max-width: 850px) {
+  nav li {
+    margin-bottom: 20px;
+  }
+}
+
+nav a {
+  text-decoration: none;
+  color: #302c2b;
+}
+
+nav .btn-login {
+  background-color: #f8e3dc;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+nav .fa-cart-shopping {
+  margin-left: 25px;
+  font-size: 21px;
+}
+
+nav .uppernav-smallscreen {
+  text-align: right;
+  padding: 15px 50px;
+  background-color: #f5cabb;
+}
+
+@media (max-width: 370px) {
+  nav .uppernav-smallscreen {
+    padding: 15px 30px;
+  }
+}
+
+nav .mainnav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 50px;
+}
+
+@media (max-width: 370px) {
+  nav .mainnav-container {
+    padding: 15px 30px;
+  }
+}
+
+nav .mainnav-container #menu-bars {
+  display: none;
+}
+
+nav .mainnav-container .fa-bars {
+  font-size: 24px;
+}
+
+nav .mainnav-container #menu-bars:checked ~ .navlinks {
+  display: block;
+  position: absolute;
+  background: #f1f1f1;
+  right: 0;
+  bottom: 0;
+  top: 128px;
+  padding: 25px 80px 50px 25px;
+}
+
+nav .mainnav-container .current {
+  border-bottom: 2px solid #302c2b;
+}
+
+nav .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo-container .logo {
+  max-width: 50px;
+  margin-right: 15px;
+}
+
+nav .logo-container .navbar-brand {
   font-family: "Cooper-black-std", serif;
+}
+
+@media (max-width: 370px) {
+  nav .logo-container .navbar-brand {
+    display: none;
+  }
+}
+
+@media (min-width: 850px) {
+  nav .fa-bars,
+  nav .uppernav-smallscreen {
+    display: none;
+  }
+  nav .logo-container {
+    min-width: 220px;
+  }
+  nav .mainnav-container {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    height: 75px;
+  }
+  nav .navlinks,
+  nav .navlinks--wrapper,
+  nav .navuser-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .navlinks--wrapper {
+    padding-left: 30px;
+    gap: 30px;
+  }
+  nav .navlinks {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .navuser-container {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+
+.productcard {
+  color: #302c2b;
+  text-decoration: none;
+}
+
+.productcard img {
+  max-width: 250px;
+}
+
+.hero-banner {
+  min-height: 300px;
+  padding: 50px 25px;
+  background-color: #2c4632;
+  color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hero-banner a {
+  text-decoration: none;
+  color: #fcfcfc;
+  background: #5f7762;
+  padding: 5px 45px;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=style.css.map */

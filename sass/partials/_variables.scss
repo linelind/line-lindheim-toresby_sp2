@@ -17,3 +17,13 @@ $colours: (
 @function getColour($colour) {
     @return map-get($colours, $colour);
 }
+
+.largerscreen-only {
+    display: none;
+
+    @media (min-width: 850px) {
+        display: inline;
+    }
+}
+
+$box-shadow: 5px 3px 8px getColour(shadow);

@@ -11,62 +11,46 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/701f282bef.js" crossorigin="anonymous"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-            crossorigin="anonymous"
-        />
         <link href="css/style.css" rel="stylesheet" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <img src="assets/images/the-flower-pot_logo.png" alt="logo for The Flower Pot." class="logo" />
-            <a class="navbar-brand" href="index.html">The Flower Pot</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Houseplants</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Pots</a>
-                    </li>
-                </ul>
-                <div>
-                    <a href="login.html">Login</a>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-        </nav>
-        <div class="jumbotron" style="background-image: url(assets/images/heroimage.jpg)">
-            <h1 class="display-4">Find your next favourite plant!</h1>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Shop</a>
-        </div>
-        <div class="featured-container">
-            <h2>Featured items</h2>
-            <div class="featured--products">
-                <div class="card" style="width: 18rem">
-                    <img src="..." class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="wrapper">
+            <header>
+                <nav>
+                    <div class="uppernav-smallscreen">
+                        <a href="login.html">Log in</a>
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </div>
-                </div>
+                    <div class="mainnav-container">
+                        <a class="logo-container">
+                            <img src="assets/images/the-flower-pot_logo.png" alt="Logo for the site The Flower Pot." class="logo" />
+                            <p class="navbar-brand">The Flower Pot</p>
+                        </a>
+                        <label for="menu-bars"><i class="fa-solid fa-bars"></i></label>
+                        <input type="checkbox" id="menu-bars" />
+                        <div class="navlinks largerscreen-only">
+                            <ul class="navlinks--wrapper">
+                                <li>
+                                    <a href="index.html" class="current">Home</a>
+                                </li>
+                                <li>
+                                    <a href="products.html">Houseplants</a>
+                                </li>
+                                <li>
+                                    <a href="products.html">Pots</a>
+                                </li>
+                            </ul>
+                            <div class="navuser-container largerscreen-only">
+                                <a href="login.html" class="btn-login">Log in</a>
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="hero-banner">
+                <h1>Find your next favourite plant</h1>
+                <a href="products.html">Shop</a>
             </div>
         </div>
         <footer>
@@ -76,20 +60,6 @@
                 <i class="fab fa-tiktok"></i>
             </div>
         </footer>
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-            crossorigin="anonymous"
-        ></script>
+        <script src="js/index.js" type="module"></script>
     </body>
 </html>
