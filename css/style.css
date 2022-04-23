@@ -1,0 +1,19 @@
+body {
+  background-color: #f5cabb;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Cooper-black-std", serif;
+}
+
+nav .logo {
+  max-width: 60px;
+  margin: 5px 15px;
+}
+
+nav .navbar-brand {
+  font-family: "Cooper-black-std", serif;
+}
+/*# sourceMappingURL=style.css.map */
