@@ -45,7 +45,7 @@ nav a {
 }
 
 nav .btn-login {
-  background-color: #f8e3dc;
+  background-color: #f5cabb;
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -202,6 +202,9 @@ nav .logo-container .navbar-brand {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-banner a {
