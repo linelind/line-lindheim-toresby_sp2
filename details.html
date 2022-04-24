@@ -4,9 +4,58 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Detail page for product." />
-        <title>The Flower Pot | Product page</title>
+        <meta name="description" content="Learn more about this plant." />
+        <title>The Flowerpot | Product details</title>
+        <link rel="stylesheet" href="https://use.typekit.net/rwh2tnp.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/701f282bef.js" crossorigin="anonymous"></script>
         <link href="css/style.css" rel="stylesheet" />
     </head>
-    <body></body>
+    <body>
+        <div class="content-wrapper">
+            <header>
+                <nav>
+                    <div class="uppernav-smallscreen">
+                        <a href="login.html">Log in</a>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="mainnav-container">
+                        <a href="index.html" class="logo-container">
+                            <img src="assets/images/the-flower-pot_logo.png" alt="Logo for the site The Flower Pot." class="logo" />
+                            <p class="navbar-brand">The Flowerpot</p>
+                        </a>
+                        <label for="menu-bars"><i class="fa-solid fa-bars"></i></label>
+                        <input type="checkbox" id="menu-bars" />
+                        <div class="navlinks largerscreen-only">
+                            <ul class="navlinks--wrapper">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html" class="current">Shop</a>
+                                </li>
+                            </ul>
+                            <div class="navuser-container largerscreen-only">
+                                <a href="login.html" class="btn-login">Log in</a>
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="details-container">Loading ...</div>
+            </main>
+        </div>
+        <footer>
+            <p>All rights reserved 2022</p>
+            <div>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+        </footer>
+        <script src="js/details.js" type="module"></script>
+    </body>
 </html>

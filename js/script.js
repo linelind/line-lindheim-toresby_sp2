@@ -16,7 +16,7 @@ const productsUrl = baseUrl + "products";
         json.forEach(function (product) {
             prodContainer.innerHTML += `<a class="productcard" href="details.html?id=${product.id}">
                                             <div class="productcard-imagecontainer">
-                                                <img src=http://localhost:1337${product.image.url} alt="${product.image.alternativeText}" />
+                                                <img src="http://localhost:1337${product.image.url}" alt="${product.image.alternativeText}" />
                                             </div>
                                             <div class="productcard-textcontainer">
                                                 <h3>${product.title}</h3>

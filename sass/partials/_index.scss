@@ -17,12 +17,12 @@
         text-shadow: $shadow-dark;
     }
 
-    a {
-        text-decoration: none;
-        color: getColour(white);
-        background: getColour(green-light);
-        padding: 5px 45px;
-        border-radius: 3px;
+    .cta {
         box-shadow: $shadow-dark;
+        padding: 5px 45px;
     }
+}
+
+.featured-container {
+    padding: 50px 25px 80px 25px;
 }

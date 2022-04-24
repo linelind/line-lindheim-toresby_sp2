@@ -30,8 +30,13 @@ h2 {
     text-align: center;
 }
 
-.featured-container {
-    padding: 50px 25px 80px 25px;
+.cta {
+    text-decoration: none;
+    color: getColour(white);
+    background: getColour(green-light);
+    padding: 5px 45px;
+
+    border: none;
 }
 
 footer {
