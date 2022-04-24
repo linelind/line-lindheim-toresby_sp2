@@ -6,7 +6,7 @@ nav {
     li {
         list-style: none;
 
-        @media (max-width: 850px) {
+        @media (max-width: $laptop-width) {
             margin-bottom: 20px;
         }
     }
@@ -32,7 +32,7 @@ nav {
         padding: 15px 50px;
         background-color: getColour(peach);
 
-        @media (max-width: 370px) {
+        @media (max-width: $smallestscreen-width) {
             padding: 15px 30px;
         }
     }
@@ -43,7 +43,7 @@ nav {
         align-items: center;
         padding: 10px 50px;
 
-        @media (max-width: 370px) {
+        @media (max-width: $smallestscreen-width) {
             padding: 15px 30px;
         }
 
@@ -83,14 +83,14 @@ nav {
             font-family: $font-headings;
         }
 
-        @media (max-width: 370px) {
+        @media (max-width: $smallestscreen-width) {
             .navbar-brand {
                 display: none;
             }
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: $laptop-width) {
         .fa-bars,
         .uppernav-smallscreen {
             display: none;

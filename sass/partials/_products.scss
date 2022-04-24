@@ -1,8 +1,21 @@
 .productcard {
     color: getColour(black);
     text-decoration: none;
+    background-color: getColour(white);
+    box-shadow: $shadow-light;
+
+    .productcard-textcontainer {
+        padding: 10px 15px;
+    }
+
+    .productcard-imagecontainer {
+        width: 200px;
+        height: 150px;
+    }
 
     img {
-        max-width: 250px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

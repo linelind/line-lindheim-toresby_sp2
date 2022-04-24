@@ -1,9 +1,53 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
 body {
     background-color: getColour(white);
-    margin: 0;
     font-family: $font-primary;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../assets/texture/double-bubble-outline.png");
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
 }
 
 h1 {
     font-family: $font-headings;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.featured-container {
+    padding: 50px 25px 80px 25px;
+}
+
+footer {
+    background-color: getColour(green-light);
+    color: getColour(white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    flex-shrink: 0;
+}
+
+.largerscreen-only {
+    display: none;
+
+    @media (min-width: 850px) {
+        display: inline;
+    }
 }

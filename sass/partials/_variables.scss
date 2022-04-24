@@ -1,6 +1,14 @@
 $font-headings: "Cooper-black-std", serif;
 $font-primary: "Open Sans", sans-serif;
 
+$smallestscreen-width: 370px;
+$tablet-width: 640px;
+$laptop-width: 850px;
+$largestscreen-width: 1200px;
+
+$shadow-light: 0px 2px 2px rgba(139, 134, 132, 0.3);
+$shadow-dark: 2px 5px 8px #000000;
+
 $colours: (
     peach: #f5cabb,
     peach-light: #f8e3dc,
@@ -10,20 +18,8 @@ $colours: (
     black: #302c2b,
     grey: #f1f1f1,
     white: #fcfcfc,
-    shadow: rgba(139, 134, 132, 0.3),
-    shadow-dark: #000000,
 );
 
 @function getColour($colour) {
     @return map-get($colours, $colour);
 }
-
-.largerscreen-only {
-    display: none;
-
-    @media (min-width: 850px) {
-        display: inline;
-    }
-}
-
-$box-shadow: 5px 3px 8px getColour(shadow);

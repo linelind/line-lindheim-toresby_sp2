@@ -13,11 +13,16 @@
     background-position: center;
     background-size: cover;
 
+    h1 {
+        text-shadow: $shadow-dark;
+    }
+
     a {
         text-decoration: none;
         color: getColour(white);
         background: getColour(green-light);
         padding: 5px 45px;
         border-radius: 3px;
+        box-shadow: $shadow-dark;
     }
 }
