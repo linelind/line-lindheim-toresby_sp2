@@ -1,0 +1,65 @@
+.featured--products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 105px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    @media (min-width: $mobile-width) {
+        margin-top: 100px;
+    }
+
+    @media (min-width: $largelaptop-width) {
+        flex-direction: row;
+        gap: 130px 230px;
+    }
+}
+
+.featuredcard {
+    color: getColour(black);
+    text-decoration: none;
+    display: flex;
+
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        background-color: getColour(peach-light);
+    }
+
+    @media (min-width: $mobile-width) {
+        margin-left: -80px;
+
+        .featured-decoration {
+            content: "";
+            height: 135%;
+            width: 380px;
+            top: -180px;
+            left: 30px;
+            z-index: 1;
+            position: relative;
+            background-color: getColour(peach-light);
+        }
+    }
+
+    .featuredcard-textcontainer {
+        padding: 10px 15px;
+        position: relative;
+        z-index: 10;
+        width: 150px;
+    }
+
+    .featuredcard-imagecontainer {
+        width: 200px;
+        height: 150px;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 10;
+    }
+}

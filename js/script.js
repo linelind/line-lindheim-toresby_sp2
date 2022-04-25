@@ -3,13 +3,11 @@ import { baseUrl } from "./settings/api.js";
 const productsUrl = baseUrl + "products";
 
 (async function () {
-    const prodContainer = document.querySelector(".shop--products-container");
-
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();
 
-        console.log(json);
+        const prodContainer = document.querySelector(".shop--products-container");
 
         prodContainer.innerHTML = "";
 
@@ -20,7 +18,7 @@ const productsUrl = baseUrl + "products";
                                             </div>
                                             <div class="productcard-textcontainer">
                                                 <h3>${product.title}</h3>
-                                                <p>${product.price}</p>
+                                                <p>£${product.price}</p>
                                             </div>
                                         </a>`;
         });
