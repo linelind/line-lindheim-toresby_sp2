@@ -11,8 +11,49 @@
     position: absolute;
     top: 130px;
     left: 80px;
+
+    @media (max-width: $smallestscreen-width) {
+        top: 110px;
+        left: 30px;
+    }
 }
 
 .fa-arrow-left-long {
     margin-right: 8px;
+}
+
+.mainnav-container {
+    margin: auto;
+}
+
+.form-container {
+    background-color: getColour(white);
+    padding: 50px 50px 70px 50px;
+    max-width: 400px;
+    position: relative;
+    margin: 180px auto 50px auto;
+
+    h1 {
+        margin-top: 0px;
+        text-align: center;
+    }
+}
+
+.form-container--content {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-top: 30px;
+    }
+
+    input {
+        margin-top: 10px;
+        padding: 8px;
+        border: 1px solid getColour(black);
+    }
+
+    .formError {
+        display: none;
+    }
 }

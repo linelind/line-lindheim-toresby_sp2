@@ -435,8 +435,56 @@ nav .logo-container .navbar-brand {
   left: 80px;
 }
 
+@media (max-width: 370px) {
+  .link-goback {
+    top: 110px;
+    left: 30px;
+  }
+}
+
 .fa-arrow-left-long {
   margin-right: 8px;
+}
+
+.mainnav-container {
+  margin: auto;
+}
+
+.form-container {
+  background-color: #fcfcfc;
+  padding: 50px 50px 70px 50px;
+  max-width: 400px;
+  position: relative;
+  margin: 180px auto 50px auto;
+}
+
+.form-container h1 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.form-container--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container--content label {
+  margin-top: 30px;
+}
+
+.form-container--content input {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #302c2b;
+}
+
+.form-container--content .formError {
+  display: none;
 }
 
 .details-container {
