@@ -44,6 +44,28 @@ h2 {
   border: none;
 }
 
+.link-goback {
+  /* border: solid 1px getColour(black); */
+  -webkit-box-shadow: 0px 2px 2px rgba(139, 134, 132, 0.3);
+          box-shadow: 0px 2px 2px rgba(139, 134, 132, 0.3);
+  background-color: #fcfcfc;
+  padding: 5px 8px;
+  position: absolute;
+  top: 130px;
+  left: 80px;
+}
+
+.link-goback .fa-arrow-left-long {
+  margin-right: 8px;
+}
+
+@media (max-width: 370px) {
+  .link-goback {
+    top: 110px;
+    left: 30px;
+  }
+}
+
 footer {
   background-color: #5f7762;
   color: #fcfcfc;
@@ -426,44 +448,28 @@ nav .logo-container .navbar-brand {
   background-position: right;
 }
 
-.link-goback {
-  border: solid 2px #302c2b;
-  background-color: #fcfcfc;
-  padding: 5px 8px;
-  position: absolute;
-  top: 130px;
-  left: 80px;
+.login-body footer {
+  margin-top: 0px;
 }
 
-@media (max-width: 370px) {
-  .link-goback {
-    top: 110px;
-    left: 30px;
-  }
-}
-
-.fa-arrow-left-long {
-  margin-right: 8px;
-}
-
-.nav-loginpage {
+.login-body .nav-loginpage {
   margin: auto;
 }
 
-.form-container {
+.login-body .form-container {
   background-color: #fcfcfc;
-  padding: 50px 50px 70px 50px;
+  padding: 50px 50px 20px 50px;
   max-width: 400px;
   position: relative;
   margin: 180px auto 50px auto;
 }
 
-.form-container h1 {
+.login-body h1 {
   margin-top: 0px;
   text-align: center;
 }
 
-.form-container--content {
+.login-body .form-container--content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -473,18 +479,24 @@ nav .logo-container .navbar-brand {
           flex-direction: column;
 }
 
-.form-container--content label {
+.login-body label {
   margin-top: 30px;
 }
 
-.form-container--content input {
+.login-body input {
   margin-top: 10px;
   padding: 8px;
   border: 1px solid #302c2b;
 }
 
-.form-container--content .formError {
+.login-body .formError {
   display: none;
+}
+
+.login-body .cta-login {
+  border: none;
+  margin: 50px auto;
+  padding: 10px 25px;
 }
 
 .details-container {
@@ -552,5 +564,15 @@ nav .logo-container .navbar-brand {
   .details-container .details--textcontainer {
     max-width: 500px;
   }
+}
+
+.shopping-cart {
+  background-color: #fcfcfc;
+  border-radius: 100%;
+  padding: 1px 7px;
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -50,3 +50,13 @@
         }
     }
 }
+
+.shopping-cart {
+    background-color: getColour(white);
+    border-radius: 100%;
+    padding: 1px 7px;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    display: none;
+}

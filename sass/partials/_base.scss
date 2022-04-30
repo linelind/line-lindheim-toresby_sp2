@@ -37,6 +37,25 @@ h2 {
     border: none;
 }
 
+.link-goback {
+    /* border: solid 1px getColour(black); */
+    box-shadow: $shadow-light;
+    background-color: getColour(white);
+    padding: 5px 8px;
+    position: absolute;
+    top: 130px;
+    left: 80px;
+
+    .fa-arrow-left-long {
+        margin-right: 8px;
+    }
+
+    @media (max-width: $smallestscreen-width) {
+        top: 110px;
+        left: 30px;
+    }
+}
+
 footer {
     background-color: getColour(green-light);
     color: getColour(white);

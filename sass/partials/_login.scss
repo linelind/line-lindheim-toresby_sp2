@@ -2,46 +2,32 @@
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/images/backgroundimage.jpg");
     background-size: cover;
     background-position: right;
-}
 
-.link-goback {
-    border: solid 2px getColour(black);
-    background-color: getColour(white);
-    padding: 5px 8px;
-    position: absolute;
-    top: 130px;
-    left: 80px;
-
-    @media (max-width: $smallestscreen-width) {
-        top: 110px;
-        left: 30px;
+    footer {
+        margin-top: 0px;
     }
-}
 
-.fa-arrow-left-long {
-    margin-right: 8px;
-}
+    .nav-loginpage {
+        margin: auto;
+    }
 
-.nav-loginpage {
-    margin: auto;
-}
-
-.form-container {
-    background-color: getColour(white);
-    padding: 50px 50px 70px 50px;
-    max-width: 400px;
-    position: relative;
-    margin: 180px auto 50px auto;
+    .form-container {
+        background-color: getColour(white);
+        padding: 50px 50px 20px 50px;
+        max-width: 400px;
+        position: relative;
+        margin: 180px auto 50px auto;
+    }
 
     h1 {
         margin-top: 0px;
         text-align: center;
     }
-}
 
-.form-container--content {
-    display: flex;
-    flex-direction: column;
+    .form-container--content {
+        display: flex;
+        flex-direction: column;
+    }
 
     label {
         margin-top: 30px;
@@ -55,5 +41,11 @@
 
     .formError {
         display: none;
+    }
+
+    .cta-login {
+        border: none;
+        margin: 50px auto;
+        padding: 10px 25px;
     }
 }
