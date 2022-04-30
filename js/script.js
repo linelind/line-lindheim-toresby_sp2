@@ -19,6 +19,7 @@ const productsUrl = baseUrl + "products";
                                             <div class="productcard-textcontainer">
                                                 <h3>${product.title}</h3>
                                                 <p>£${product.price}</p>
+                                                <button class="cta-view">View</button>
                                             </div>
                                         </a>`;
         });

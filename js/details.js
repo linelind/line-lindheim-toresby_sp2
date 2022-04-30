@@ -32,7 +32,7 @@ function createHtml(product) {
                                         <div class="details--textcontainer">
                                             <h1>${product.title}</h1>
                                             <p>£${product.price}</p>
-                                            <button class="cta">Add to cart</button>
+                                            <button class="cta cta-add">Add to cart</button>
                                             <p>${product.description}</p>
                                         </div>
                                     </div>`;
