@@ -1,10 +1,24 @@
 .shop-container {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
 
-    h1 {
-        text-align: center;
+    .shop--heading-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin: 50px;
+
+        @media (max-width: $mobile-width) {
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 70px;
+        }
+
+        .search {
+            max-width: 150px;
+            padding: 5px 7px;
+            border: 1px solid getColour(green);
+        }
     }
 
     .shop--products-container {
@@ -12,8 +26,8 @@
         flex-wrap: wrap;
         gap: 50px;
         align-items: center;
-        justify-content: center;
-        padding: 25px;
+        justify-content: space-evenly;
+        margin: 25px 50px;
     }
 
     .productcard {

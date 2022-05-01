@@ -383,13 +383,40 @@ nav .logo-container .navbar-brand {
 }
 
 .shop-container {
-  max-width: 1000px;
+  max-width: 1050px;
   margin: auto;
 }
 
-.shop-container h1 {
-  text-align: center;
+.shop-container .shop--heading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 50px;
+}
+
+@media (max-width: 480px) {
+  .shop-container .shop--heading-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 70px;
+  }
+}
+
+.shop-container .shop--heading-container .search {
+  max-width: 150px;
+  padding: 5px 7px;
+  border: 1px solid #2c4632;
 }
 
 .shop-container .shop--products-container {
@@ -402,10 +429,10 @@ nav .logo-container .navbar-brand {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 25px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 25px 50px;
 }
 
 .shop-container .productcard {
