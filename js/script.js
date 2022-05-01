@@ -1,28 +1,17 @@
 import { baseUrl } from "./settings/api.js";
+import { renderProducts } from "./ui/renderProducts.js";
+import { searchProducts } from "./ui/searchProducts.js";
+import { displayMessage } from "./ui/displayMessage.js";
 
 const productsUrl = baseUrl + "products";
 
 (async function () {
     try {
         const response = await fetch(productsUrl);
-        const json = await response.json();
+        const products = await response.json();
 
-        const prodContainer = document.querySelector(".shop--products-container");
-
-        prodContainer.innerHTML = "";
-
-        json.forEach(function (product) {
-            prodContainer.innerHTML += `<a class="productcard" href="details.html?id=${product.id}">
-                                            <div class="productcard-imagecontainer">
-                                                <img src="http://localhost:1337${product.image.url}" alt="${product.image.alternativeText}" />
-                                            </div>
-                                            <div class="productcard-textcontainer">
-                                                <h3>${product.title}</h3>
-                                                <p>£${product.price}</p>
-                                                <button class="cta-view">View</button>
-                                            </div>
-                                        </a>`;
-        });
+        renderProducts(products);
+        searchProducts(products);
     } catch (error) {
         console.log(error);
     }

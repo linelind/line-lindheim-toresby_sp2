@@ -11,6 +11,8 @@ const urlDetails = baseUrl + "products/" + id;
         const result = await fetch(urlDetails);
         const details = await result.json();
 
+        console.log(details);
+
         createHtml(details);
     } catch (error) {
         console.log(error);
@@ -29,7 +31,7 @@ function createHtml(product) {
                                         <div class="details--textcontainer">
                                             <h1>${product.title}</h1>
                                             <p>£${product.price}</p>
-                                            <button class="cta cta-add" data-id="${product.id}" data-title="${product.title}">Add to cart</button>
+                                            <button class="cta cta-add" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}">Add to cart</button>
                                             <p>${product.description}</p>
                                         </div>
                                     </div>`;
@@ -41,17 +43,19 @@ function createHtml(product) {
     const addButton = document.querySelector(".cta-add");
     const shoppingCart = document.querySelector(".shopping-cart");
 
-    let count = 0;
+    /* let count = 0; */
 
     addButton.addEventListener("mouseup", addToCart);
 
     function addToCart() {
         const id = this.dataset.id;
         const title = this.dataset.title;
+        const price = this.dataset.price;
+        const image = this.dataset.image;
 
-        count++;
+        /* count++;
         shoppingCart.style.display = "block";
-        shoppingCart.innerHTML = count;
+        shoppingCart.innerHTML = count; */
         addButton.style.backgroundColor = "#302c2b";
 
         setTimeout(function () {
@@ -65,7 +69,7 @@ function createHtml(product) {
         });
 
         if (!itemExists) {
-            const item = { id: id, title: title };
+            const item = { id: id, title: title, price: "£ " + price, image: image };
             currentCartItems.push(item);
             saveCartItem(currentCartItems);
         } else {

@@ -1,0 +1,18 @@
+.cart-item {
+    display: flex;
+
+    h2 {
+        text-align: left;
+    }
+}
+
+.cart-item--imagecontainer {
+    max-width: 150px;
+    max-height: 150px;
+
+    img {
+        object-fit: cover;
+        width: 150px;
+        height: 150px;
+    }
+}

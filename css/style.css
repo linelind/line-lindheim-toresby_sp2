@@ -499,6 +499,28 @@ nav .logo-container .navbar-brand {
   padding: 10px 25px;
 }
 
+.cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart-item h2 {
+  text-align: left;
+}
+
+.cart-item--imagecontainer {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.cart-item--imagecontainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
 .details-container {
   display: -webkit-box;
   display: -ms-flexbox;
