@@ -69,7 +69,7 @@ function createHtml(product) {
         });
 
         if (!itemExists) {
-            const item = { id: id, title: title, price: "£ " + price, image: image };
+            const item = { id: id, title: title, price: price, image: image };
             currentCartItems.push(item);
             saveCartItem(currentCartItems);
         } else {
