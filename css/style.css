@@ -52,21 +52,21 @@ h2 {
 }
 
 .message.error {
-  border-color: #dc2121;
-  color: #fcfcfc;
-  background: #dc2121;
+  border-color: #be2020;
+  color: #be2020;
+  background: #fef1f1;
 }
 
 .message.warning {
-  border-color: #bc441a;
-  color: #fcfcfc;
-  background: #bc441a;
+  border-color: #b7431c;
+  color: #b7431c;
+  background: #ffefe9;
 }
 
 .message.success {
   border-color: getColor(green);
-  color: #fcfcfc;
-  background: getColor(green);
+  color: #2c4632;
+  background: getColor(success-light);
 }
 
 .link-goback {
@@ -401,9 +401,13 @@ nav .logo-container .navbar-brand {
 }
 
 .featured-container {
-  padding: 50px 25px 80px 25px;
+  padding: 0px 25px 80px 25px;
   max-width: 1000px;
   margin: auto;
+}
+
+.message-homecontainer {
+  margin: 50px;
 }
 
 .shop-container {

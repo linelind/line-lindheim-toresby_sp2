@@ -1,21 +1,23 @@
 import { baseUrl } from "./settings/api.js";
 import { getExistingItem } from "./utils/cartFunctions.js";
+import { displayMessage } from "./ui/displayMessage.js";
+import createMenu from "./ui/createMenu.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const urlDetails = baseUrl + "products/" + id;
 
+createMenu();
+
 (async function () {
     try {
         const result = await fetch(urlDetails);
         const details = await result.json();
 
-        console.log(details);
-
         createHtml(details);
     } catch (error) {
-        console.log(error);
+        displayMessage("error", "Something went wrong", ".message-detailscontainer");
     }
 })();
 
@@ -41,7 +43,7 @@ function createHtml(product) {
     pageTitle.innerHTML = `The Flowerpot | ${product.title}`;
 
     const addButton = document.querySelector(".cta-add");
-    const shoppingCart = document.querySelector(".shopping-cart");
+    /* const shoppingCart = document.querySelector(".shopping-cart"); */
 
     /* let count = 0; */
 

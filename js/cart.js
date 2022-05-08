@@ -1,9 +1,12 @@
 import { getExistingItem } from "./utils/cartFunctions.js";
+import createMenu from "./ui/createMenu.js";
 
 const addedItems = getExistingItem();
 
 const cartContainer = document.querySelector(".cart-container");
 const cartTotal = document.querySelector(".cart-totalsum");
+
+createMenu();
 
 if (addedItems.length === 0) {
     cartContainer.innerHTML = "No items in cart.";
@@ -34,5 +37,4 @@ addedItems.forEach((cartItem) => {
     }
 
     cartTotal.innerHTML = "£" + totalSum;
-    console.log(totalSum);
 });

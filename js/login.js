@@ -20,7 +20,7 @@ function submitForm(event) {
     const passwordValue = password.value.trim();
 
     if (usernameValue.length === 0 || passwordValue === 0) {
-        return displayMessage("warning", "Please fill the form", ".message-container");
+        return displayMessage("warning", "Please fill out the form", ".message-container");
     }
 
     doLogin(usernameValue, passwordValue);
@@ -51,10 +51,10 @@ async function doLogin(username, password) {
         }
 
         if (json.error) {
-            displayMessage("warning", "Invalid login details", ".message-container");
+            displayMessage("error", "Invalid login details", ".message-container");
         }
     } catch (error) {
-        console.log(error);
+        displayMessage("error", "Oh no! Something went wrong", ".message-container");
     }
 }
 

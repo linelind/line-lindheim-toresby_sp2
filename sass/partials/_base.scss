@@ -45,21 +45,21 @@ h2 {
 }
 
 .message.error {
-    border-color: getColour(red);
-    color: getColour(white);
-    background: getColour(red);
+    border-color: getColour(error);
+    color: getColour(error);
+    background: getColour(error-light);
 }
 
 .message.warning {
-    border-color: getColour(orange);
-    color: getColour(white);
-    background: getColour(orange);
+    border-color: getColour(warning);
+    color: getColour(warning);
+    background: getColour(warning-light);
 }
 
 .message.success {
     border-color: getColor(green);
-    color: getColour(white);
-    background: getColor(green);
+    color: getColour(green);
+    background: getColor(success-light);
 }
 
 .link-goback {
