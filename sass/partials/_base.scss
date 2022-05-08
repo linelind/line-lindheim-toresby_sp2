@@ -39,31 +39,30 @@ h2 {
 
 .message {
     width: 100%;
-    padding: 1rem;
+    padding: 16px;
     border: 1px solid grey;
     color: grey;
 }
 
 .message.error {
-    border-color: red;
-    color: white;
-    background: red;
+    border-color: getColour(red);
+    color: getColour(white);
+    background: getColour(red);
 }
 
 .message.warning {
-    border-color: orange;
-    color: white;
-    background: orange;
+    border-color: getColour(orange);
+    color: getColour(white);
+    background: getColour(orange);
 }
 
 .message.success {
-    border-color: green;
-    color: white;
-    background: green;
+    border-color: getColor(green);
+    color: getColour(white);
+    background: getColor(green);
 }
 
 .link-goback {
-    /* border: solid 1px getColour(black); */
     box-shadow: $shadow-light;
     background-color: getColour(white);
     padding: 5px 8px;

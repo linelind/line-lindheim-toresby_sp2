@@ -46,31 +46,30 @@ h2 {
 
 .message {
   width: 100%;
-  padding: 1rem;
+  padding: 16px;
   border: 1px solid grey;
   color: grey;
 }
 
 .message.error {
-  border-color: red;
-  color: white;
-  background: red;
+  border-color: #dc2121;
+  color: #fcfcfc;
+  background: #dc2121;
 }
 
 .message.warning {
-  border-color: orange;
-  color: white;
-  background: orange;
+  border-color: #bc441a;
+  color: #fcfcfc;
+  background: #bc441a;
 }
 
 .message.success {
-  border-color: green;
-  color: white;
-  background: green;
+  border-color: getColor(green);
+  color: #fcfcfc;
+  background: getColor(green);
 }
 
 .link-goback {
-  /* border: solid 1px getColour(black); */
   -webkit-box-shadow: 0px 2px 2px rgba(139, 134, 132, 0.3);
           box-shadow: 0px 2px 2px rgba(139, 134, 132, 0.3);
   background-color: #fcfcfc;
