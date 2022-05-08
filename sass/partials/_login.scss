@@ -39,8 +39,11 @@
         border: 1px solid getColour(black);
     }
 
-    .formError {
+    .form-error {
         display: none;
+        font-size: 12px;
+        font-style: italic;
+        color: getColour(green);
     }
 
     .cta-login {

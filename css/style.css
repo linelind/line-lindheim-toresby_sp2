@@ -516,8 +516,11 @@ nav .logo-container .navbar-brand {
   border: 1px solid #302c2b;
 }
 
-.login-body .formError {
+.login-body .form-error {
   display: none;
+  font-size: 12px;
+  font-style: italic;
+  color: #2c4632;
 }
 
 .login-body .cta-login {
