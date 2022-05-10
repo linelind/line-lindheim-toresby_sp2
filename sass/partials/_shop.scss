@@ -60,4 +60,10 @@
             cursor: pointer;
         }
     }
+
+    .productcard:hover {
+        transform-style: center center 0px;
+        transform: perspective(800px) rotateY(-13deg);
+        transition: ease 0.3s;
+    }
 }
