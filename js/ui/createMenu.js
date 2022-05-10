@@ -1,12 +1,15 @@
 import { getUsername } from "../utils/storage.js";
 
 export default function createMenu() {
-    const loginBtnSmall = document.querySelector(".login-menu-small");
-    const loginBtnLarge = document.querySelector(".login-menu-large");
+    const menuContainerSmall = document.querySelector(".uppernav-smallscreen");
+    const menuContainerLarge = document.querySelector(".navuser-container");
     const username = getUsername();
 
     if (username) {
-        loginBtnSmall.innerHTML = `<span>Log out</span>`;
-        loginBtnLarge.innerHTML = `<span>Log out</span>`;
+        menuContainerSmall.innerHTML = `<a href="admin.html" class="login-menu-small">Hi ${username}</a>
+                                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>`;
+
+        menuContainerLarge.innerHTML = `<a href="admin.html" class="login-menu-large btn-login">Hi ${username}</a>
+                                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>`;
     }
 }
