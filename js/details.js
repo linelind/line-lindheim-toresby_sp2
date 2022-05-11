@@ -1,5 +1,5 @@
 import { baseUrl } from "./settings/api.js";
-import { getExistingItem } from "./utils/cartFunctions.js";
+import { getExistingItem, saveCartItem } from "./utils/cartFunctions.js";
 import { displayMessage } from "./ui/displayMessage.js";
 import createMenu from "./ui/createMenu.js";
 
@@ -43,9 +43,6 @@ function createHtml(product) {
     pageTitle.innerHTML = `The Flowerpot | ${product.title}`;
 
     const addButton = document.querySelector(".cta-add");
-    /* const shoppingCart = document.querySelector(".shopping-cart"); */
-
-    /* let count = 0; */
 
     addButton.addEventListener("mouseup", addToCart);
 
@@ -55,32 +52,20 @@ function createHtml(product) {
         const price = this.dataset.price;
         const image = this.dataset.image;
 
-        /* count++;
-        shoppingCart.style.display = "block";
-        shoppingCart.innerHTML = count; */
         addButton.style.backgroundColor = "#302c2b";
 
         setTimeout(function () {
             addButton.style.backgroundColor = "#5f7762";
-        }, 800);
+        }, 600);
 
         const currentCartItems = getExistingItem();
 
-        const itemExists = currentCartItems.find(function (cartItems) {
-            return cartItems.id === id;
-        });
-
-        if (!itemExists) {
-            const item = { id: id, title: title, price: price, image: image };
-            currentCartItems.push(item);
-            saveCartItem(currentCartItems);
-        } else {
-            const newCartItems = currentCartItems.filter((cartItems) => cartItems.id !== id);
-            saveCartItem(newCartItems);
-        }
+        const item = { id: id, title: title, price: price, image: image };
+        currentCartItems.push(item);
+        saveCartItem(currentCartItems);
     }
 }
 
-function saveCartItem(cartItems) {
+/* function saveCartItem(cartItems) {
     localStorage.setItem("cartitems", JSON.stringify(cartItems));
-}
+} */

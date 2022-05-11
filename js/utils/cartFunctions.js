@@ -7,3 +7,7 @@ export function getExistingItem() {
         return JSON.parse(cartItems);
     }
 }
+
+export function saveCartItem(cartItems) {
+    localStorage.setItem("cartitems", JSON.stringify(cartItems));
+}
