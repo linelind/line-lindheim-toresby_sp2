@@ -18,6 +18,8 @@ logoutBtn.onclick = function () {
 
     menuContainerLarge.innerHTML = `<a href="login.html" class="login-menu-large btn-login">Log in</a>
                                     <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>`;
+
+    location.href = "login.html";
 };
 
 const form = document.querySelector("form");
@@ -75,6 +77,5 @@ createMenu();
         });
     } catch (error) {
         displayMessage("error", "Something went wrong while fetching the products", ".shop--products-container");
-        console.log(error);
     }
 })();

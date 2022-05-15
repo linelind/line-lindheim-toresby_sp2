@@ -49,6 +49,8 @@ h2 {
   padding: 16px;
   border: 1px solid grey;
   color: grey;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .message.error {
@@ -64,9 +66,9 @@ h2 {
 }
 
 .message.success {
-  border-color: getColor(green);
+  border-color: #2c4632;
   color: #2c4632;
-  background: getColor(success-light);
+  background: #e8f5eb;
 }
 
 .link-goback {
@@ -894,5 +896,113 @@ nav .logo-container .navbar-brand {
   right: 30px;
   top: 5px;
   display: none;
+}
+
+.admin-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.admin-header {
+  margin: 20px 50px;
+}
+
+@media (min-width: 480px) {
+  .admin-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.admin-header h1 {
+  font-size: 28px;
+}
+
+.adminedit-header {
+  margin-top: 150px;
+}
+
+.btn-logout {
+  background-color: #5f7762;
+  color: #fcfcfc;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.editproducts-container {
+  margin-top: 80px;
+  background-color: #fcfcfc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.editproducts-container h2 {
+  margin-bottom: 50px;
+}
+
+.editproducts-container .productcard:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.addForm-container,
+.editForm-container {
+  background-color: #fcfcfc;
+  margin: 20px auto;
+  padding: 40px;
+  max-width: 1000px;
+}
+
+.addForm-container label,
+.editForm-container label {
+  display: block;
+  margin-top: 20px;
+}
+
+.addForm-container form,
+.editForm-container form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.addForm-container form input,
+.addForm-container textarea,
+.editForm-container form input,
+.editForm-container textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+.addForm-container .form-featured,
+.editForm-container .form-featured {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.addForm-container .formbutton-update,
+.addForm-container .formbutton-add,
+.editForm-container .formbutton-update,
+.editForm-container .formbutton-add {
+  border: none;
+  padding: 10px 15px;
+  background-color: #302c2b;
+  color: #fcfcfc;
 }
 /*# sourceMappingURL=style.css.map */

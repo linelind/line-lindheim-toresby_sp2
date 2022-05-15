@@ -1,0 +1,47 @@
+.admin-wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.admin-header {
+    margin: 20px 50px;
+
+    @media (min-width: $mobile-width) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+.adminedit-header {
+    margin-top: 150px;
+}
+
+.btn-logout {
+    background-color: getColour(green-light);
+    color: getColour(white);
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.editproducts-container {
+    margin-top: 80px;
+    background-color: getColour(white);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .productcard:hover {
+        transform: scale(1.02);
+        transition: 0.4s;
+    }
+}

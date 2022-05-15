@@ -1,5 +1,5 @@
 import { baseUrl } from "../settings/api.js";
-import { getToken } from "../utils/storage.js";
+import { getToken } from "./storage.js";
 import { displayMessage } from "../ui/displayMessage.js";
 
 export async function addProduct(title, price, description, imageUrl, featured) {

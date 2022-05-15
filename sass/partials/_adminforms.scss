@@ -1,0 +1,38 @@
+.addForm-container,
+.editForm-container {
+    background-color: getColour(white);
+    margin: 20px auto;
+    padding: 40px;
+    max-width: 1000px;
+
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+
+    form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    form input,
+    textarea {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .form-featured {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .formbutton-update,
+    .formbutton-add {
+        border: none;
+        padding: 10px 15px;
+        background-color: getColour(black);
+        color: getColour(white);
+    }
+}

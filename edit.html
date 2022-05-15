@@ -43,15 +43,15 @@
                             </div>
                         </div>
                     </div>
+                    <a href="admin.html" class="link-goback"><i class="fa-solid fa-arrow-left-long"></i>Admin home</a>
                 </nav>
             </header>
             <main>
                 <div class="admin-wrapper">
-                    <div>
-                        <h1>Admin section</h1>
+                    <div class="admin-header adminedit-header">
+                        <h1>Admin edit</h1>
                         <button class="btn-logout">Log out</button>
                     </div>
-
                     <div class="editForm-container">
                         <h2>Edit product</h2>
 
@@ -75,15 +75,15 @@
                                 <label for="image_url">Image URL</label>
                                 <input id="image_url" />
                             </div>
-                            <div>
-                                <label for="featured">Featured</label>
+                            <div class="form-featured">
+                                <label for="featured" class="featured">Featured</label>
                                 <input type="checkbox" id="featured" />
                             </div>
 
                             <input id="id" type="hidden" />
 
                             <div>
-                                <button id="update">Update</button>
+                                <button id="update" class="formbutton-update">Update product</button>
                             </div>
                         </form>
                     </div>
