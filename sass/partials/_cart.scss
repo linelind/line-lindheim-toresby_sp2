@@ -1,18 +1,105 @@
-.cart-item {
-    display: flex;
+.link-goback {
+    margin: 50px auto;
 
-    h2 {
-        text-align: left;
+    @media (min-width: $laptop-width) {
+        margin: 0px auto;
     }
 }
 
-.cart-item--imagecontainer {
-    max-width: 150px;
-    max-height: 150px;
+.cart-wrapper {
+    margin: 150px 50px 0px 50px;
+    max-width: 1100px;
 
-    img {
-        object-fit: cover;
-        width: 150px;
-        height: 150px;
+    @media (max-width: $smallestscreen-width) {
+        margin: 100px 10px;
+
+        h1 {
+            text-align: center;
+        }
     }
+
+    @media (min-width: $tablet-width) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (min-width: $laptop-width) {
+        margin: 150px auto;
+    }
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: getColour(white);
+    padding: 10px;
+
+    .cart-item {
+        display: flex;
+        margin-bottom: 50px;
+        gap: 10px;
+
+        h2 {
+            text-align: left;
+            font-size: 18px;
+        }
+
+        a,
+        p {
+            font-size: 14px;
+        }
+
+        @media (max-width: $smallestscreen-width) {
+            h2 {
+                font-size: 16px;
+            }
+
+            a,
+            p {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: $tablet-width) {
+            min-width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+
+    .cart-item--imagecontainer {
+        max-width: 150px;
+        max-height: 150px;
+
+        img {
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+
+            @media (max-width: $smallestscreen-width) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    .cart-item_textcontainer {
+        @media (min-width: $tablet-width) {
+            display: flex;
+            gap: 10px;
+        }
+
+        @media (min-width: $laptop-width) {
+            display: flex;
+            gap: 150px;
+        }
+    }
+}
+
+.cart-totalcontainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: getColour(grey);
+    padding: 15px;
 }

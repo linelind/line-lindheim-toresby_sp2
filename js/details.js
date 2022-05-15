@@ -53,10 +53,12 @@ function createHtml(product) {
         const image = this.dataset.image;
 
         addButton.style.backgroundColor = "#302c2b";
+        addButton.innerHTML = "Item added";
 
         setTimeout(function () {
             addButton.style.backgroundColor = "#5f7762";
-        }, 600);
+            addButton.innerHTML = "Add to cart";
+        }, 1000);
 
         const currentCartItems = getExistingItem();
 
@@ -65,7 +67,3 @@ function createHtml(product) {
         saveCartItem(currentCartItems);
     }
 }
-
-/* function saveCartItem(cartItems) {
-    localStorage.setItem("cartitems", JSON.stringify(cartItems));
-} */

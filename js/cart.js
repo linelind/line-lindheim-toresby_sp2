@@ -21,15 +21,14 @@ addedItems.forEach((cartItem) => {
                                         <div class="cart-item--imagecontainer">
                                             <img src="${cartItem.image}" alt="Product image.">
                                         </div>
-                                        <div class="cart-item--titlecontainer">
-                                            <h2>${cartItem.title}</h2>
-                                            <a href="details.html?id=${cartItem.id}">Go to product</a>
-                                        </div>
-                                        <div class="cart-item--pricecontainer">
-                                            <p>£${cartItem.price}</p>
-                                        </div>
-                                        <div class="cart-item--trashcontainer">
-                                            <i class="fa-solid fa-trash-can" id="${cartItem.id}"></i>
+                                        <div class="cart-item_textcontainer">
+                                            <div class="cart-item--titlecontainer">
+                                                <h2>${cartItem.title}</h2>
+                                                <a href="details.html?id=${cartItem.id}">Go to product</a>
+                                            </div>
+                                            <div class="cart-item--pricecontainer">
+                                                <p>£${cartItem.price}</p>
+                                            </div> 
                                         </div>
                                     </div>`;
     /* } */
