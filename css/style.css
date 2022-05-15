@@ -1002,7 +1002,6 @@ nav .logo-container .navbar-brand {
   height: 30px;
   margin-bottom: 15px;
   margin-top: 40px;
-  /* cursor: pointer; */
 }
 
 .toggleslider {
@@ -1011,7 +1010,7 @@ nav .logo-container .navbar-brand {
   right: -80px;
   bottom: 5px;
   left: 80px;
-  background: #ababab;
+  background: #aea7a7;
   border-radius: 20px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
