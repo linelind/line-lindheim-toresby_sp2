@@ -14,9 +14,6 @@ if (addedItems.length === 0) {
 }
 
 addedItems.forEach((cartItem) => {
-    /* const productID = document.getElementById(`${cartItem.id}`);*/
-    /* if (!productID) { */
-
     cartContainer.innerHTML += `<div class="cart-item" id="${cartItem.id}">
                                         <div class="cart-item--imagecontainer">
                                             <img src="${cartItem.image}" alt="Product image.">
@@ -31,7 +28,6 @@ addedItems.forEach((cartItem) => {
                                             </div> 
                                         </div>
                                     </div>`;
-    /* } */
 
     let totalSum = 0;
 
@@ -39,20 +35,5 @@ addedItems.forEach((cartItem) => {
         totalSum += JSON.parse(addedItems[i].price);
     }
 
-    cartTotal.innerHTML = "£" + totalSum.toFixed(0);
-
-    /* const trash = document.querySelectorAll(".fa-trash-can");
-
-    trash.forEach((button) => {
-        button.addEventListener("click", handleClick);
-    });
-
-    function handleClick() {
-        console.log("hi");
-
-        if (trash.id === cartItem.id) {
-            localStorage.remove(cartItem);
-        }
-
-    } */
+    cartTotal.innerHTML = "£" + totalSum.toFixed(2);
 });

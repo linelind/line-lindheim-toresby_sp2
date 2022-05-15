@@ -28,11 +28,16 @@
         max-width: 390px;
     }
 
-    .cta-add {
+    .cta-add,
+    .cta-remove {
         padding: 10px 20px;
         margin-top: 15px;
         margin-bottom: 15px;
         cursor: pointer;
+    }
+
+    .cta-remove {
+        background-color: getColour(black);
     }
 
     @media (max-width: $smallestscreen-width) {

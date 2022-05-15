@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="The cart gives you an overview of your chosen plants." />
-        <title>The Flowerpot | Cart</title>
+        <meta name="description" content="Edit the information for a chosen product." />
+        <title>The Flowerpot | Edit product</title>
         <link rel="stylesheet" href="https://use.typekit.net/rwh2tnp.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,18 +43,49 @@
                             </div>
                         </div>
                     </div>
-                    <a href="shop.html" class="link-goback"><i class="fa-solid fa-arrow-left-long"></i>Keep shopping</a>
                 </nav>
             </header>
             <main>
-                <div class="cart-wrapper">
-                    <h1>Cart</h1>
+                <div class="admin-wrapper">
                     <div>
-                        <div class="cart-container"></div>
+                        <h1>Admin section</h1>
+                        <button class="btn-logout">Log out</button>
                     </div>
-                    <div class="cart-totalcontainer">
-                        <div class="cart-total">Total</div>
-                        <div class="cart-totalsum"></div>
+
+                    <div class="editForm-container">
+                        <h2>Edit product</h2>
+
+                        <div class="loading">Loading product...</div>
+
+                        <form class="edit-form">
+                            <div class="message-container"></div>
+                            <div>
+                                <label for="title">Title</label>
+                                <input id="title" />
+                            </div>
+                            <div>
+                                <label for="price">Price</label>
+                                <input id="price" />
+                            </div>
+                            <div>
+                                <label for="description">Description</label>
+                                <textarea id="description"></textarea>
+                            </div>
+                            <div>
+                                <label for="image_url">Image URL</label>
+                                <input id="image_url" />
+                            </div>
+                            <div>
+                                <label for="featured">Featured</label>
+                                <input type="checkbox" id="featured" />
+                            </div>
+
+                            <input id="id" type="hidden" />
+
+                            <div>
+                                <button id="update">Update</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </main>
@@ -66,6 +97,6 @@
                 <i class="fab fa-tiktok"></i>
             </div>
         </footer>
-        <script src="js/cart.js" type="module"></script>
+        <script src="js/edit.js" type="module"></script>
     </body>
 </html>

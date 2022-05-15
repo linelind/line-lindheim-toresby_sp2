@@ -23,6 +23,7 @@ createMenu();
 
 function createHtml(product) {
     const detailsContainer = document.querySelector(".details-container");
+    let cssClass = "cta-add";
 
     detailsContainer.innerHTML = "";
 
@@ -33,7 +34,7 @@ function createHtml(product) {
                                         <div class="details--textcontainer">
                                             <h1>${product.title}</h1>
                                             <p>£${product.price}</p>
-                                            <button class="cta cta-add" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}">Add to cart</button>
+                                            <button class="cta ${cssClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}">Add to cart</button>
                                             <p>${product.description}</p>
                                         </div>
                                     </div>`;
@@ -43,27 +44,30 @@ function createHtml(product) {
     pageTitle.innerHTML = `The Flowerpot | ${product.title}`;
 
     const addButton = document.querySelector(".cta-add");
-
     addButton.addEventListener("mouseup", addToCart);
+}
 
-    function addToCart() {
-        const id = this.dataset.id;
-        const title = this.dataset.title;
-        const price = this.dataset.price;
-        const image = this.dataset.image;
+function addToCart() {
+    this.classList.toggle("cta-add");
+    this.classList.toggle("cta-remove");
 
-        addButton.style.backgroundColor = "#302c2b";
-        addButton.innerHTML = "Item added";
+    const id = this.dataset.id;
+    const title = this.dataset.title;
+    const price = this.dataset.price;
+    const image = this.dataset.image;
 
-        setTimeout(function () {
-            addButton.style.backgroundColor = "#5f7762";
-            addButton.innerHTML = "Add to cart";
-        }, 1000);
+    const currentCartItems = getExistingItem();
 
-        const currentCartItems = getExistingItem();
+    const productExists = currentCartItems.find(function (cartitem) {
+        return cartitem.id === id;
+    });
 
+    if (productExists === undefined) {
         const item = { id: id, title: title, price: price, image: image };
         currentCartItems.push(item);
         saveCartItem(currentCartItems);
+    } else {
+        const newItem = currentCartItems.filter((cartitem) => cartitem.id !== id);
+        saveCartItem(newItem);
     }
 }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Find your next favourite plant. Large selection of indoor houseplants." />
+        <meta name="description" content="Admin section where you can add or edit products." />
         <title>The Flowerpot | Admin page</title>
         <link rel="stylesheet" href="https://use.typekit.net/rwh2tnp.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,8 +46,43 @@
                 </nav>
             </header>
             <main>
-                <h1>Admin page</h1>
-                <button class="btn-logout">Log out</button>
+                <div class="admin-wrapper">
+                    <div>
+                        <h1>Admin section</h1>
+                        <button class="btn-logout">Log out</button>
+                    </div>
+                    <div class="addForm-container">
+                        <h2>Add product</h2>
+                        <form>
+                            <div class="message-container"></div>
+                            <div>
+                                <label for="title">Title</label>
+                                <input id="title" />
+                            </div>
+                            <div>
+                                <label for="price">Price</label>
+                                <input id="price" />
+                            </div>
+                            <div>
+                                <label for="description">Description</label>
+                                <textarea id="description"></textarea>
+                            </div>
+                            <div>
+                                <label for="image_url">Image URL</label>
+                                <input id="image_url" />
+                            </div>
+                            <div>
+                                <label for="featured">Featured</label>
+                                <input type="checkbox" id="featured" />
+                            </div>
+                            <button>Add</button>
+                        </form>
+                    </div>
+                    <div class="editproducts-container">
+                        <h2>Edit product</h2>
+                        <div class="editproducts-content"></div>
+                    </div>
+                </div>
             </main>
         </div>
         <footer>
