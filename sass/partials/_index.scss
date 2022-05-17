@@ -39,6 +39,11 @@
             font-size: 18px;
         }
     }
+
+    .cta:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+    }
 }
 
 .featured-container {

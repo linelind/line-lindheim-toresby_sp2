@@ -19,14 +19,16 @@ cartContainer.innerHTML = "";
 
 if (addedItems.length === 0) {
     cartContainer.innerHTML = "No items in cart.";
-    cartTotal.innerHTML = totalSum;
+    cartContainer.style.padding = "50px";
+    cartContainer.style.backgroundColor = "#f8e3dc";
+    cartTotal.innerHTML = "£0";
 }
 
 addedItems.forEach((cartItem) => {
-    cartContainer.innerHTML += `<div class="cart-item" id="${cartItem.id}">
+    cartContainer.innerHTML += `<div class="cart-item" id="${cartItem.id}"> 
                                         <div class="cart-item--imagecontainer">
                                             <img src="${cartItem.image}" alt="Product image" />
-                                        </div>
+                                        </div>                                        
                                         <div class="cart-item_textcontainer">
                                             <div class="cart-item--titlecontainer">
                                                 <h2>${cartItem.title}</h2>

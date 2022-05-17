@@ -94,6 +94,18 @@
             gap: 150px;
         }
     }
+
+    .cart-item--titlecontainer {
+        @media (min-width: $tablet-width) {
+            margin-left: -60px;
+        }
+    }
+
+    .cart-item--pricecontainer {
+        @media (min-width: $tablet-width) and (max-width: $laptop-width) {
+            margin-right: -40px;
+        }
+    }
 }
 
 .cart-totalcontainer {

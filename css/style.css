@@ -32,11 +32,6 @@ h1 {
   font-family: "Cooper-black-std", serif;
 }
 
-h2 {
-  margin: 0;
-  /* text-align: center; */
-}
-
 .cta {
   text-decoration: none;
   color: #fcfcfc;
@@ -149,6 +144,22 @@ footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-top: 150px;
+  font-size: 12px;
+}
+
+@media (max-width: 370px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer .fa-instagram,
+footer .fa-tiktok {
+  font-size: 18px;
+  padding-left: 15px;
 }
 
 .largerscreen-only {
@@ -364,7 +375,7 @@ nav .navlinks-mobile-container .navlinks-mobile--menu {
 }
 
 nav .navlinks-mobile-container .navlinks-mobile--menu h2 {
-  padding: 10px 40px;
+  padding: 0px 40px;
 }
 
 nav .navlinks-mobile-container .navlinks-mobile--menu i {
@@ -550,6 +561,13 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
     padding: 10px 60px;
     font-size: 18px;
   }
+}
+
+.hero-banner .cta:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .featured-container {
@@ -796,6 +814,7 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
 
 .login-body h1 {
   margin-top: 0px;
+  margin-bottom: -20px;
   text-align: center;
 }
 
@@ -810,11 +829,16 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
 }
 
 .login-body label {
-  margin-top: 30px;
+  margin-top: 25px;
+}
+
+.login-body .username {
+  margin-top: 0px;
 }
 
 .login-body input {
-  margin-top: 10px;
+  margin-top: 8px;
+  margin-bottom: 5px;
   padding: 8px;
   border: 1px solid #302c2b;
 }
@@ -830,6 +854,8 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
   border: none;
   margin: 50px auto;
   padding: 10px 25px;
+  cursor: pointer;
+  width: 100%;
 }
 
 .link-goback {
@@ -955,6 +981,18 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
     display: -ms-flexbox;
     display: flex;
     gap: 150px;
+  }
+}
+
+@media (min-width: 640px) {
+  .cart-container .cart-item--titlecontainer {
+    margin-left: -60px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 850px) {
+  .cart-container .cart-item--pricecontainer {
+    margin-right: -40px;
   }
 }
 
@@ -1102,6 +1140,7 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
   padding: 8px 12px;
   font-size: 16px;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .editproducts-container {
@@ -1165,6 +1204,7 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
   color: #fcfcfc;
   width: 100%;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .addForm-container .update-container,

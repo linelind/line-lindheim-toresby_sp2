@@ -25,11 +25,6 @@ h1 {
     font-family: $font-headings;
 }
 
-h2 {
-    margin: 0;
-    /* text-align: center; */
-}
-
 .cta {
     text-decoration: none;
     color: getColour(white);
@@ -118,6 +113,17 @@ footer {
     padding: 5px 50px;
     flex-shrink: 0;
     margin-top: 150px;
+    font-size: 12px;
+
+    @media (max-width: $smallestscreen-width) {
+        flex-direction: column;
+    }
+
+    .fa-instagram,
+    .fa-tiktok {
+        font-size: 18px;
+        padding-left: 15px;
+    }
 }
 
 .largerscreen-only {
