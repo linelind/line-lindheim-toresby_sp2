@@ -34,7 +34,7 @@ const imageAlt = document.querySelector("#image_alt");
 const featured = document.querySelector("#featured");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
-const loading = document.querySelector(".loading");
+const loading = document.querySelector(".loader");
 
 (async function () {
     try {
@@ -56,7 +56,6 @@ const loading = document.querySelector(".loading");
         }
     } catch (error) {
         displayMessage("error", "Something went wrong", ".message-container");
-        console.log(error);
     } finally {
         loading.style.display = "none";
         form.style.display = "block";

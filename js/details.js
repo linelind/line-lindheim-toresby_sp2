@@ -17,8 +17,9 @@ createMenu();
 
         createHtml(details);
     } catch (error) {
-        displayMessage("error", "Something went wrong", ".message-detailscontainer");
-        console.log(error);
+        const detailsContainer = document.querySelector(".details-container");
+        detailsContainer.innerHTML = "";
+        displayMessage("error", "Something went wrong", ".message-container");
     }
 })();
 

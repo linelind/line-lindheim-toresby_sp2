@@ -19,13 +19,13 @@ createMenu();
         const featuredProducts = await fetch(productsUrl);
         const result = await featuredProducts.json();
 
-        const featuredContainer = document.querySelector(".featured--products");
+        const featureProducts = document.querySelector(".featured--products");
 
-        featuredContainer.innerHTML = "";
+        featureProducts.innerHTML = "";
 
         result.forEach(function (product) {
             if (product.featured === true) {
-                featuredContainer.innerHTML += `<a class="featuredcard" href="details.html?id=${product.id}">
+                featureProducts.innerHTML += `<a class="featuredcard" href="details.html?id=${product.id}">
                                                     <div class="featuredcard-imagecontainer">
                                                         <img src="http://localhost:1337${product.image.url}" alt="${product.image.alternativeText}" />
                                                         <div class="featured-decoration"></div>
@@ -38,6 +38,9 @@ createMenu();
             }
         });
     } catch (error) {
-        displayMessage("error", "Something went wrong when loading the page", ".message-homecontainer");
+        const featuredContainer = document.querySelector(".featured-container");
+        featuredContainer.innerHTML = "";
+
+        displayMessage("error", "Something went wrong when loading the page", ".message-container");
     }
 })();

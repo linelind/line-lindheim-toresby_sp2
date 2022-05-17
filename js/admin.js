@@ -68,6 +68,6 @@ createMenu();
                                             </a>`;
         });
     } catch (error) {
-        displayMessage("error", "Something went wrong while fetching the products", ".shop--products-container");
+        displayMessage("error", "Something went wrong while fetching the products", ".editproducts-content");
     }
 })();

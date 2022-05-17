@@ -38,6 +38,5 @@ export async function updateProduct(title, price, description, imageUrl, imageAl
         }
     } catch (error) {
         displayMessage("error", "An error occured", ".message-container");
-        console.log(error);
     }
 }

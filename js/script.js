@@ -16,7 +16,6 @@ createMenu();
         renderProducts(products);
         searchProducts(products);
     } catch (error) {
-        displayMessage("error", "Something went wrong while fetching the products", ".shop--products-container");
-        console.log(error);
+        displayMessage("error", "Something went wrong when fetching the products", ".shop--products-container");
     }
 })();

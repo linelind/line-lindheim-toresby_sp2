@@ -41,6 +41,5 @@ export async function addProduct(title, price, description, imageUrl, imageAlt, 
         }
     } catch (error) {
         displayMessage("error", "An error occured", ".message-container");
-        console.log(error);
     }
 }

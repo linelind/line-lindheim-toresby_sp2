@@ -37,6 +37,25 @@ h2 {
     border: none;
 }
 
+.loader {
+    border: 25px solid getColour(peach);
+    border-top: 25px solid getColour(peach-light);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin: 100px auto 150px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .message {
     width: 100%;
     padding: 16px;
@@ -62,6 +81,12 @@ h2 {
     border-color: getColour(green);
     color: getColour(green);
     background: getColour(success-light);
+}
+
+.message-container {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .link-goback {

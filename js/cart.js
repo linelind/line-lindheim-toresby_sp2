@@ -1,4 +1,4 @@
-import { getExistingItem, saveCartItem } from "./utils/cartFunctions.js";
+import { getExistingItem } from "./utils/cartFunctions.js";
 import createMenu from "./ui/createMenu.js";
 
 const addedItems = getExistingItem();
@@ -8,6 +8,8 @@ const cartTotal = document.querySelector(".cart-totalsum");
 
 createMenu();
 
+cartContainer.innerHTML = "";
+
 if (addedItems.length === 0) {
     cartContainer.innerHTML = "No items in cart.";
     cartTotal.innerHTML = totalSum;
@@ -16,7 +18,7 @@ if (addedItems.length === 0) {
 addedItems.forEach((cartItem) => {
     cartContainer.innerHTML += `<div class="cart-item" id="${cartItem.id}">
                                         <div class="cart-item--imagecontainer">
-                                            <img src="${cartItem.image}" alt="Product image.">
+                                            <img src="${cartItem.image}" alt="Product image" />
                                         </div>
                                         <div class="cart-item_textcontainer">
                                             <div class="cart-item--titlecontainer">
