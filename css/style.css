@@ -990,9 +990,16 @@ nav .logo-container .navbar-brand {
   transition: 0.4s;
 }
 
-.addForm-container,
+.addForm-container {
+  background-color: #f1f1f1;
+}
+
 .editForm-container {
   background-color: #fcfcfc;
+}
+
+.addForm-container,
+.editForm-container {
   margin: 20px auto;
   padding: 40px;
   max-width: 1000px;

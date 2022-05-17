@@ -1,6 +1,13 @@
-.addForm-container,
+.addForm-container {
+    background-color: getColour(grey);
+}
+
 .editForm-container {
     background-color: getColour(white);
+}
+
+.addForm-container,
+.editForm-container {
     margin: 20px auto;
     padding: 40px;
     max-width: 1000px;
