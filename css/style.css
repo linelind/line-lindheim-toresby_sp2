@@ -860,16 +860,11 @@ nav .logo-container .navbar-brand {
   max-width: 390px;
 }
 
-.details-container .cta-add,
-.details-container .cta-remove {
+.details-container .details-button {
   padding: 10px 20px;
   margin-top: 15px;
   margin-bottom: 15px;
   cursor: pointer;
-}
-
-.details-container .cta-remove {
-  background-color: #302c2b;
 }
 
 @media (max-width: 370px) {
@@ -984,15 +979,26 @@ nav .logo-container .navbar-brand {
   padding: 5px;
 }
 
-.addForm-container .formbutton-update,
-.addForm-container .formbutton-add,
-.editForm-container .formbutton-update,
-.editForm-container .formbutton-add {
+.addForm-container button,
+.editForm-container button {
   border: none;
   padding: 10px 15px;
-  background-color: #302c2b;
+  background-color: #5f7762;
   color: #fcfcfc;
+  width: 100%;
+  font-weight: bold;
+}
+
+.addForm-container .update-container,
+.addForm-container .add-container,
+.editForm-container .update-container,
+.editForm-container .add-container {
   margin-top: 50px;
+}
+
+.addForm-container .delete-btn,
+.editForm-container .delete-btn {
+  background-color: #302c2b;
 }
 
 .toggle {

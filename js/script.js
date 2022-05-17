@@ -17,5 +17,6 @@ createMenu();
         searchProducts(products);
     } catch (error) {
         displayMessage("error", "Something went wrong while fetching the products", ".shop--products-container");
+        console.log(error);
     }
 })();

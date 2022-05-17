@@ -21,13 +21,22 @@
         padding: 5px;
     }
 
-    .formbutton-update,
-    .formbutton-add {
+    button {
         border: none;
         padding: 10px 15px;
-        background-color: getColour(black);
+        background-color: getColour(green-light);
         color: getColour(white);
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .update-container,
+    .add-container {
         margin-top: 50px;
+    }
+
+    .delete-btn {
+        background-color: getColour(black);
     }
 }
 

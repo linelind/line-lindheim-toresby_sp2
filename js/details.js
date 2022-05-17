@@ -18,12 +18,12 @@ createMenu();
         createHtml(details);
     } catch (error) {
         displayMessage("error", "Something went wrong", ".message-detailscontainer");
+        console.log(error);
     }
 })();
 
 function createHtml(product) {
     const detailsContainer = document.querySelector(".details-container");
-    let cssClass = "cta-add";
 
     detailsContainer.innerHTML = "";
 
@@ -34,22 +34,42 @@ function createHtml(product) {
                                         <div class="details--textcontainer">
                                             <h1>${product.title}</h1>
                                             <p>£${product.price}</p>
-                                            <button class="cta ${cssClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}">Add to cart</button>
+                                            <button class="cta details-button" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}">Add to cart</button>
                                             <p>${product.description}</p>
                                         </div>
                                     </div>`;
+
+    const detailsBtn = document.querySelector(".details-button");
+    const currentCartItems = getExistingItem();
+
+    const productExists = currentCartItems.find(function (cartitem) {
+        return cartitem.id === id;
+    });
+
+    if (!productExists) {
+        detailsBtn.innerHTML = "Add to cart";
+    } else {
+        detailsBtn.innerHTML = "Remove from cart";
+        detailsBtn.style.backgroundColor = "#302c2b";
+    }
 
     const pageTitle = document.querySelector("title");
 
     pageTitle.innerHTML = `The Flowerpot | ${product.title}`;
 
-    const addButton = document.querySelector(".cta-add");
-    addButton.addEventListener("mouseup", addToCart);
+    detailsBtn.addEventListener("mouseup", addToCart);
 }
 
 function addToCart() {
-    this.classList.toggle("cta-add");
-    this.classList.toggle("cta-remove");
+    const detailsBtn = document.querySelector(".details-button");
+
+    if (detailsBtn.innerHTML === "Add to cart") {
+        detailsBtn.innerHTML = "Remove from cart";
+        detailsBtn.style.backgroundColor = "#302c2b";
+    } else {
+        detailsBtn.innerHTML = "Add to cart";
+        detailsBtn.style.backgroundColor = "#5f7762";
+    }
 
     const id = this.dataset.id;
     const title = this.dataset.title;
