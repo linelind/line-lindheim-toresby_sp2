@@ -2,6 +2,7 @@ import { baseUrl } from "./settings/api.js";
 import { getExistingItem, saveCartItem } from "./utils/cartFunctions.js";
 import { displayMessage } from "./ui/displayMessage.js";
 import createMenu from "./ui/createMenu.js";
+import { displayMenu, hideMenu } from "./ui/hamburgerMenu.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -9,6 +10,12 @@ const id = params.get("id");
 const urlDetails = baseUrl + "products/" + id;
 
 createMenu();
+
+const bars = document.querySelector(".fa-bars");
+const close = document.querySelector(".close-container");
+
+bars.addEventListener("click", displayMenu);
+close.addEventListener("click", hideMenu);
 
 (async function () {
     try {

@@ -15,11 +15,29 @@
 
     h1 {
         text-shadow: $shadow-dark;
+        font-size: 28px;
+
+        @media (min-width: $mobile-width) {
+            font-size: 36px;
+        }
+
+        @media (min-width: $tablet-width) {
+            font-size: 48px;
+        }
+
+        @media (min-width: $largestscreen-width) {
+            font-size: 56px;
+        }
     }
 
     .cta {
         box-shadow: $shadow-dark;
         padding: 5px 45px;
+
+        @media (min-width: $tablet-width) {
+            padding: 10px 60px;
+            font-size: 18px;
+        }
     }
 }
 
@@ -27,6 +45,10 @@
     padding: 0px 25px 80px 25px;
     max-width: 1000px;
     margin: auto;
+
+    h2 {
+        text-align: center;
+    }
 
     .featured--products {
         display: flex;

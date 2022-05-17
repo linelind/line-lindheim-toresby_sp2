@@ -2,6 +2,7 @@ import { baseUrl } from "./settings/api.js";
 import { addProduct } from "./utils/addProduct.js";
 import { displayMessage } from "./ui/displayMessage.js";
 import createMenu from "./ui/createMenu.js";
+import { displayMenu, hideMenu } from "./ui/hamburgerMenu.js";
 import logoutButton from "./ui/logoutButton.js";
 import { getToken } from "./utils/storage.js";
 
@@ -13,6 +14,12 @@ if (!token) {
 
 createMenu();
 logoutButton();
+
+const bars = document.querySelector(".fa-bars");
+const close = document.querySelector(".close-container");
+
+bars.addEventListener("click", displayMenu);
+close.addEventListener("click", hideMenu);
 
 const form = document.querySelector("form");
 const title = document.querySelector("#title");

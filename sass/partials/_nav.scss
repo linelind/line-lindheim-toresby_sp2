@@ -27,6 +27,10 @@ nav {
         font-size: 21px;
     }
 
+    .current {
+        border-bottom: 2px solid getColour(black);
+    }
+
     .uppernav-smallscreen {
         text-align: right;
         padding: 15px 50px;
@@ -47,26 +51,9 @@ nav {
             padding: 15px 30px;
         }
 
-        #menu-bars {
-            display: none;
-        }
-
         .fa-bars {
             font-size: 24px;
-        }
-
-        #menu-bars:checked ~ .navlinks {
-            display: block;
-            position: absolute;
-            background: getColour(grey);
-            right: 0;
-            bottom: 0;
-            top: 128px;
-            padding: 25px 80px 50px 25px;
-        }
-
-        .current {
-            border-bottom: 2px solid getColour(black);
+            cursor: pointer;
         }
     }
 
@@ -92,7 +79,8 @@ nav {
 
     @media (min-width: $laptop-width) {
         .fa-bars,
-        .uppernav-smallscreen {
+        .uppernav-smallscreen,
+        .navlinks-mobile-container {
             display: none;
         }
 
@@ -124,6 +112,73 @@ nav {
 
         .navuser-container {
             justify-content: right;
+        }
+    }
+
+    .navlinks-mobile-container {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: getColour(white);
+        box-shadow: $shadow-dark;
+        width: 200px;
+        height: 100%;
+        z-index: 100;
+        animation: animateright 0.6s;
+
+        @keyframes animateright {
+            0% {
+                right: -330px;
+                opacity: 0;
+            }
+            100% {
+                right: 0;
+                opacity: 1;
+            }
+        }
+
+        @media (min-width: $mobile-width) {
+            width: 300px;
+        }
+
+        .close-container {
+            cursor: pointer;
+        }
+
+        .navlinks-mobile--menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: getColour(peach-light);
+
+            h2 {
+                padding: 10px 40px;
+            }
+
+            i {
+                padding-right: 20px;
+                padding-left: 10px;
+            }
+
+            h2,
+            i {
+                font-size: 18px;
+            }
+
+            @media (max-width: $mobile-width) {
+                .close {
+                    display: none;
+                }
+            }
+        }
+
+        .navlinks-mobile--content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 30px;
+            gap: 8px;
         }
     }
 }

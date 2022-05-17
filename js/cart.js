@@ -1,5 +1,6 @@
 import { getExistingItem } from "./utils/cartFunctions.js";
 import createMenu from "./ui/createMenu.js";
+import { displayMenu, hideMenu } from "./ui/hamburgerMenu.js";
 
 const addedItems = getExistingItem();
 
@@ -7,6 +8,12 @@ const cartContainer = document.querySelector(".cart-container");
 const cartTotal = document.querySelector(".cart-totalsum");
 
 createMenu();
+
+const bars = document.querySelector(".fa-bars");
+const close = document.querySelector(".close-container");
+
+bars.addEventListener("click", displayMenu);
+close.addEventListener("click", hideMenu);
 
 cartContainer.innerHTML = "";
 

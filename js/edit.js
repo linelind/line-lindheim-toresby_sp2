@@ -3,6 +3,7 @@ import { displayMessage } from "./ui/displayMessage.js";
 import { updateProduct } from "./utils/updateProduct.js";
 import deleteButton from "./utils/deleteProduct.js";
 import createMenu from "./ui/createMenu.js";
+import { displayMenu, hideMenu } from "./ui/hamburgerMenu.js";
 import logoutButton from "./ui/logoutButton.js";
 import { getToken } from "./utils/storage.js";
 
@@ -14,6 +15,12 @@ if (!token) {
 
 createMenu();
 logoutButton();
+
+const bars = document.querySelector(".fa-bars");
+const close = document.querySelector(".close-container");
+
+bars.addEventListener("click", displayMenu);
+close.addEventListener("click", hideMenu);
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

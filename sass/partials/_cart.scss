@@ -99,7 +99,16 @@
 .cart-totalcontainer {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin-top: 20px;
     background-color: getColour(grey);
     padding: 15px;
+    font-weight: 600;
+
+    @media (min-width: $tablet-width) {
+        font-size: 18px;
+    }
+
+    @media (min-width: $laptop-width) {
+        padding: 20px 60px;
+    }
 }

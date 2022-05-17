@@ -1,11 +1,18 @@
 import { baseUrl } from "./settings/api.js";
 import { displayMessage } from "./ui/displayMessage.js";
+import { displayMenu, hideMenu } from "./ui/hamburgerMenu.js";
 import createMenu from "./ui/createMenu.js";
 
 const homeUrl = baseUrl + "home";
 const productsUrl = baseUrl + "products";
 
 createMenu();
+
+const bars = document.querySelector(".fa-bars");
+const close = document.querySelector(".close-container");
+
+bars.addEventListener("click", displayMenu);
+close.addEventListener("click", hideMenu);
 
 (async function () {
     try {

@@ -27,7 +27,7 @@ h1 {
 
 h2 {
     margin: 0;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .cta {
@@ -35,6 +35,8 @@ h2 {
     color: getColour(white);
     background: getColour(green-light);
     border: none;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .loader {
