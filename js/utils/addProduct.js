@@ -2,7 +2,7 @@ import { baseUrl } from "../settings/api.js";
 import { getToken } from "./storage.js";
 import { displayMessage } from "../ui/displayMessage.js";
 
-export async function addProduct(title, price, description, imageUrl, imageAlt, featured) {
+export async function addProduct(title, price, description, imageUrl, featured) {
     const url = baseUrl + "products";
 
     const data = JSON.stringify({
@@ -10,7 +10,6 @@ export async function addProduct(title, price, description, imageUrl, imageAlt, 
         price: price,
         description: description,
         image_url: imageUrl,
-        alternativeText: imageAlt,
         featured: featured,
     });
 

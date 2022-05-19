@@ -65,7 +65,7 @@ createMenu();
         products.forEach(function (product) {
             editContainer.innerHTML += `<a class="productcard" href="edit.html?id=${product.id}">
                                                 <div class="productcard-imagecontainer">
-                                                    <img src="http://localhost:1337${product.image.url}" alt="${product.image.alternativeText}" />
+                                                <img src="${product.image_url}" alt="Product image of ${product.title}." />
                                                 </div>
                                                 <div class="productcard-textcontainer">
                                                     <h3>${product.title}</h3>

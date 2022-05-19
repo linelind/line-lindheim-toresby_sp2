@@ -37,12 +37,12 @@ function createHtml(product) {
 
     detailsContainer.innerHTML += `<div class="details-container">
                                         <div class="details--imagecontainer">
-                                            <img src="http://localhost:1337${product.image.url}" alt="${product.image.alternativeText}"/>
+                                        <img src="${product.image_url}" alt="Product image of ${product.title}." />
                                         </div>
                                         <div class="details--textcontainer">
                                             <h1>${product.title}</h1>
                                             <p>£${product.price}</p>
-                                            <button class="cta details-button" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}">Add to cart</button>
+                                            <button class="cta details-button" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="${product.image_url}">Add to cart</button>
                                             <p>${product.description}</p>
                                         </div>
                                     </div>`;

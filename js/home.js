@@ -34,7 +34,7 @@ close.addEventListener("click", hideMenu);
             if (product.featured === true) {
                 featureProducts.innerHTML += `<a class="featuredcard" href="details.html?id=${product.id}">
                                                     <div class="featuredcard-imagecontainer">
-                                                        <img src="http://localhost:1337${product.image.url}" alt="${product.image.alternativeText}" />
+                                                        <img src="${product.image_url}" alt="Product image of ${product.title}." />
                                                         <div class="featured-decoration"></div>
                                                     </div>
                                                     <div class="featuredcard-textcontainer">
@@ -49,5 +49,6 @@ close.addEventListener("click", hideMenu);
         featuredContainer.innerHTML = "";
 
         displayMessage("error", "Something went wrong when loading the page", ".message-container");
+        console.log(error);
     }
 })();
