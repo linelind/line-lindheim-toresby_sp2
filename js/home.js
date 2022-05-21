@@ -34,7 +34,7 @@ close.addEventListener("click", hideMenu);
             if (product.featured === true) {
                 featureProducts.innerHTML += `<a class="featuredcard" href="details.html?id=${product.id}">
                                                     <div class="featuredcard-imagecontainer">
-                                                        <img src="${product.image_url}" alt="Product image of ${product.title}." />
+                                                        <img src="${product.image_url}" alt="${product.image_alt_text}" />
                                                         <div class="featured-decoration"></div>
                                                     </div>
                                                     <div class="featuredcard-textcontainer">

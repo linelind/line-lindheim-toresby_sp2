@@ -26,6 +26,7 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const imageUrl = document.querySelector("#image_url");
+const imageAltText = document.querySelector("#image_alt_text");
 const featured = document.querySelector("#featured");
 const message = document.querySelector(".message-container");
 
@@ -40,13 +41,21 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const imageUrlValue = imageUrl.value.trim();
+    const imageAltTextValue = imageAltText.value.trim();
     const featuredValue = featured.checked;
 
-    if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageUrlValue.length === 0) {
+    if (
+        titleValue.length === 0 ||
+        priceValue.length === 0 ||
+        isNaN(priceValue) ||
+        descriptionValue.length === 0 ||
+        imageUrlValue.length === 0 ||
+        imageAltTextValue.length === 0
+    ) {
         return displayMessage("warning", "Please add values", ".message-container");
     }
 
-    addProduct(titleValue, priceValue, descriptionValue, imageUrlValue, featuredValue);
+    addProduct(titleValue, priceValue, descriptionValue, imageUrlValue, imageAltTextValue, featuredValue);
 }
 
 const productsUrl = baseUrl + "products";
@@ -65,7 +74,7 @@ createMenu();
         products.forEach(function (product) {
             editContainer.innerHTML += `<a class="productcard" href="edit.html?id=${product.id}">
                                                 <div class="productcard-imagecontainer">
-                                                <img src="${product.image_url}" alt="Product image of ${product.title}." />
+                                                <img src="${product.image_url}" alt="${product.image_alt_text}" />
                                                 </div>
                                                 <div class="productcard-textcontainer">
                                                     <h3>${product.title}</h3>

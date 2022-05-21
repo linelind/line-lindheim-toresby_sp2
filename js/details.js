@@ -42,7 +42,7 @@ function createHtml(product) {
                                         <div class="details--textcontainer">
                                             <h1>${product.title}</h1>
                                             <p>£${product.price}</p>
-                                            <button class="cta details-button" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="${product.image_url}">Add to cart</button>
+                                            <button class="cta details-button" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="${product.image_url}" data-imagetext="${product.image_alt_text}">Add to cart</button>
                                             <p>${product.description}</p>
                                         </div>
                                     </div>`;
@@ -83,6 +83,7 @@ function addToCart() {
     const title = this.dataset.title;
     const price = this.dataset.price;
     const image = this.dataset.image;
+    const imagetext = this.dataset.imagetext;
 
     const currentCartItems = getExistingItem();
 
@@ -91,7 +92,7 @@ function addToCart() {
     });
 
     if (productExists === undefined) {
-        const item = { id: id, title: title, price: price, image: image };
+        const item = { id: id, title: title, price: price, image: image, imagetext: imagetext };
         currentCartItems.push(item);
         saveCartItem(currentCartItems);
     } else {

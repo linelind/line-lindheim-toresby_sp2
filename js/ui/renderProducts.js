@@ -6,7 +6,7 @@ export function renderProducts(productsToRender) {
     productsToRender.forEach(function (product) {
         prodContainer.innerHTML += `<a class="productcard" href="details.html?id=${product.id}">
                                             <div class="productcard-imagecontainer">
-                                            <img src="${product.image_url}" alt="Product image of ${product.title}." />
+                                            <img src="${product.image_url}" alt="${product.image_alt_text}" />
                                             </div>
                                             <div class="productcard-textcontainer">
                                                 <h3>${product.title}</h3>
