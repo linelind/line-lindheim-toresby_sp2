@@ -1,1 +1,1 @@
-export const baseUrl = "http://localhost:1337/";
+export const baseUrl = "https://strapi-sp2-myapi.herokuapp.com/";

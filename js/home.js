@@ -21,7 +21,7 @@ close.addEventListener("click", hideMenu);
 
         const herobanner = document.querySelector(".hero-banner");
 
-        herobanner.style.backgroundImage = `url("http://localhost:1337${json.hero_banner.url}")`;
+        herobanner.style.backgroundImage = `url("${json.hero_banner.url}")`;
 
         const featuredProducts = await fetch(productsUrl);
         const result = await featuredProducts.json();
