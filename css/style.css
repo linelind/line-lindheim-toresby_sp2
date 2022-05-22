@@ -1087,16 +1087,6 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
   max-width: 500px;
 }
 
-.shopping-cart {
-  background-color: #fcfcfc;
-  border-radius: 100%;
-  padding: 1px 7px;
-  position: absolute;
-  right: 30px;
-  top: 5px;
-  display: none;
-}
-
 .admin-wrapper {
   max-width: 1000px;
   margin: auto;
