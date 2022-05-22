@@ -51,7 +51,7 @@ async function doLogin(username, password) {
         }
 
         if (json.error) {
-            displayMessage("warning", "Invalid login details", ".message-container");
+            displayMessage("error", "Invalid login details", ".message-container");
         }
     } catch (error) {
         displayMessage("error", "Oh no! Something went wrong", ".message-container");

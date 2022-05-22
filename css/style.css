@@ -147,19 +147,13 @@ footer {
   font-size: 12px;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 480px) {
   footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-}
-
-footer .fa-instagram,
-footer .fa-tiktok {
-  font-size: 18px;
-  padding-left: 15px;
 }
 
 .largerscreen-only {
@@ -1033,7 +1027,7 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 @media (min-width: 850px) {
@@ -1043,7 +1037,7 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
         -ms-flex-direction: row;
             flex-direction: row;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     gap: 50px;
   }
 }
@@ -1086,6 +1080,11 @@ nav .navlinks-mobile-container .navlinks-mobile--content {
   .details-container .details--textcontainer {
     max-width: 500px;
   }
+}
+
+.details-message {
+  margin-top: 120px;
+  max-width: 500px;
 }
 
 .shopping-cart {

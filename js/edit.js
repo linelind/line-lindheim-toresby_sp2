@@ -27,7 +27,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 if (!id) {
-    document.location.href = "/admin.html";
+    document.location.href = "/index.html";
 }
 
 const productUrl = baseUrl + "products/" + id;

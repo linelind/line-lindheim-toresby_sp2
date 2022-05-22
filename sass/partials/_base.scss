@@ -115,14 +115,8 @@ footer {
     margin-top: 150px;
     font-size: 12px;
 
-    @media (max-width: $smallestscreen-width) {
+    @media (max-width: $mobile-width) {
         flex-direction: column;
-    }
-
-    .fa-instagram,
-    .fa-tiktok {
-        font-size: 18px;
-        padding-left: 15px;
     }
 }
 
