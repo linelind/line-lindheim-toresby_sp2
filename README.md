@@ -34,7 +34,7 @@ This site was built using the following technologies
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+Do the following steps to get the project started.
 
 1. Clone the repo:
 
@@ -50,8 +50,6 @@ npm install
 
 ### Running
 
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
 To run the app, run the following commands:
 
 ```bash
@@ -60,6 +58,6 @@ npm run start
 
 ## Contact
 
-You can find me on LinkedIn.
+If you want to get in touch, please find me on LinkedIn.
 
 [My LinkedIn Profile](https://www.linkedin.com/in/line-lindheim-t%C3%B8resby-6667a812b/)
